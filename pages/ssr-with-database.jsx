@@ -12,7 +12,7 @@ export default function ssrWithDatabase({ text, data }) {
 export async function getServerSideProps(context) {
   const text = "ssr with database";
 
-  const {rowCount} = await sql`SELECT * from Email`;
+  const {rowCount} = await sql`SELECT * FROM "Email";`;
 
   // console.log(data.rowCount);
 
